@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathématiques 2de - Programme Officiel 2019</title>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #059669 0%, #047857 100%);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .topic-card {
+            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(15, 23, 42, 0.15);
+            border-color: #10b981;
+        }
+        
+        .formula-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #f0fdf4 100%);
+            border-left: 5px solid #10b981;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+        }
+        
+        .concept-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 0.25rem;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #10b981;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, #10b981 0%, #065f46 100%);
+        }
+        
+        .badge-official {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: white;
+        }
+        
+        .content-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        
+        .title-bar {
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .competency-list {
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+            border-left: 5px solid #10b981;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <!-- Navigation -->\n    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-lg shadow-lg border-b-2 border-emerald-200">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-calculator text-3xl text-emerald-600"></i>
+                    <div class="hidden sm:block">
+                        <h1 class="text-lg font-bold bg-gradient-to-r from-slate-800 to-slate-700 bg-clip-text text-transparent">Mathématiques 2de</h1>
+                        <p class="text-xs text-emerald-600 font-semibold">Programme Officiel 2019</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-3 sm:gap-6 text-sm sm:text-base overflow-x-auto">
+                    <a href="#programme" class="nav-link text-slate-700 font-medium whitespace-nowrap">Programme</a>
+                    <a href="#contenus" class="nav-link text-slate-700 font-medium whitespace-nowrap">Contenus</a>
+                    <a href="#apprentissage" class="nav-link text-slate-700 font-medium whitespace-nowrap">Apprentissage</a>
+                    <a href="#competences" class="nav-link text-slate-700 font-medium whitespace-nowrap">Compétences</a>
+                    <a href="#methodologie" class="nav-link text-slate-700 font-medium whitespace-nowrap">Méthodes</a>
+                </div>
+                
+                <a href="https://www.education.gouv.fr/bo/19/Special1/MENE1901631A.htm" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-full text-sm flex items-center gap-2 whitespace-nowrap">
+                    <i class="fas fa-download"></i> BO
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-20 lg:py-32">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-block badge-official px-4 py-2 rounded-full text-sm font-bold">
+                        <i class="fas fa-certificate"></i> Conforme BO n°30 du 25 juillet 2019
+                    </div>
+                    
+                    <h2 class="text-4xl lg:text-6xl font-extrabold leading-tight">
+                        Maîtrise les <span class="text-emerald-300">Mathématiques</span> en Seconde
+                    </h2>
+                    
+                    <p class="text-lg text-slate-200 leading-relaxed">
+                        Programme officiel du ministère de l'Éducation Nationale. Une ressource pédagogique fiable pour comprendre les concepts clés, maîtriser les méthodes et réussir ton année.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 pt-6">
+                        <a href="#contenus" class="btn-primary text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">
+                            <i class="fas fa-book-open"></i> Découvrir les contenus
+                        </a>
+                        <a href="#methodologie" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition-all">
+                            <i class="fas fa-lightbulb"></i> Conseils pédagogiques
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4 pt-8">
+                        <div class="bg-slate-800/70 p-4 rounded-xl border border-slate-700 text-center">
+                            <div class="text-2xl font-bold text-emerald-300">4</div>
+                            <div class="text-xs text-slate-300 font-semibold">Domaines</div>
+                        </div>
+                        <div class="bg-slate-800/70 p-4 rounded-xl border border-slate-700 text-center">
+                            <div class="text-2xl font-bold text-yellow-300">100%</div>
+                            <div class="text-xs text-slate-300 font-semibold">Officiel</div>
+                        </div>
+                        <div class="bg-slate-800/70 p-4 rounded-xl border border-slate-700 text-center">
+                            <div class="text-2xl font-bold text-blue-300">2019</div>
+                            <div class="text-xs text-slate-300 font-semibold">Révisé</div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8">
+                        <p class="text-emerald-200 font-semibold mb-4"><i class="fas fa-book mr-2"></i>Table des matières:</p>
+                        <ul class="space-y-2 text-sm text-slate-300">
+                            <li><i class="fas fa-check text-emerald-300 mr-2"></i><a href="#programme" class="hover:text-emerald-300">Programme Officiel</a></li>
+                            <li><i class="fas fa-check text-emerald-300 mr-2"></i><a href="#contenus" class="hover:text-emerald-300">4 Domaines d'Étude</a></li>
+                            <li><i class="fas fa-check text-emerald-300 mr-2"></i><a href="#apprentissage" class="hover:text-emerald-300">Guide d'Apprentissage Détaillé</a></li>
+                            <li><i class="fas fa-check text-emerald-300 mr-2"></i><a href="#methodologie" class="hover:text-emerald-300">Méthodes de Résolution</a></li>
+                            <li><i class="fas fa-check text-emerald-300 mr-2"></i><a href="#competences" class="hover:text-emerald-300">Exercices Pratiques</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="relative hidden lg:block">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-3xl blur-3xl"></div>
+                    <div class="relative bg-gradient-to-br from-emerald-100 to-blue-100 p-8 rounded-3xl shadow-2xl">
+                        <div class="space-y-6">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <div class="text-2xl font-bold text-emerald-600 mb-2">Calcul & Algèbre</div>
+                                <p class="text-sm text-slate-600">Maîtrise des polynômes et résolution d'équations</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <div class="text-2xl font-bold text-blue-600 mb-2">Fonctions</div>
+                                <p class="text-sm text-slate-600">Étude complète des fonctions de référence</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <div class="text-2xl font-bold text-purple-600 mb-2">Géométrie</div>
+                                <p class="text-sm text-slate-600">Vecteurs et géométrie dans le plan</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <div class="text-2xl font-bold text-pink-600 mb-2">Statistiques</div>
+                                <p class="text-sm text-slate-600">Données et probabilités</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Programme Overview Section -->
+    <section id="programme" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Programme Officiel 2019</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Le programme de mathématiques en classe de seconde générale et technologique vise à former des citoyens responsables et à poursuivre l'apprentissage initié au collège.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Principles -->
+                <div class="bg-gradient-to-br from-emerald-50 to-green-50 p-8 rounded-2xl border border-emerald-200">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 title-bar">
+                        <i class="fas fa-compass text-emerald-600"></i> Principes Fondamentaux
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <i class="fas fa-star text-emerald-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Rupture entre Collège et Lycée</h4>
+                                <p class="text-sm text-slate-600">Passage du collège au lycée caractérisé par une augmentation de l'abstraction et du formalisme mathématique</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-star text-emerald-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Diversité des Problématiques</h4>
+                                <p class="text-sm text-slate-600">Abordage des mathématiques selon plusieurs perspectives : calcul, raisonnement et problèmes réalistes</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-star text-emerald-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Utilisation d'Outils Numériques</h4>
+                                <p class="text-sm text-slate-600">Intégration des calculatrices et logiciels pour explorer, conjecturer et valider</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-star text-emerald-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Contextualisation et Applications</h4>
+                                <p class="text-sm text-slate-600">Mise en place de problèmes issus du monde réel pour motiver l'apprentissage</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Distribution -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-200">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 title-bar">
+                        <i class="fas fa-chart-pie text-blue-600"></i> Répartition Horaire
+                    </h3>
+                    
+                    <div class="space-y-5">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-slate-800">Calcul & Algèbre</span>
+                                <span class="badge-official text-xs px-2 py-1">30%</span>
+                            </div>
+                            <div class="w-full bg-slate-300 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-500 to-orange-600 h-3 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-slate-800">Fonctions</span>
+                                <span class="badge-official text-xs px-2 py-1">30%</span>
+                            </div>
+                            <div class="w-full bg-slate-300 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-blue-500 to-cyan-600 h-3 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-slate-800">Géométrie</span>
+                                <span class="badge-official text-xs px-2 py-1">20%</span>
+                            </div>
+                            <div class="w-full bg-slate-300 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-600 h-3 rounded-full" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-slate-800">Statistiques & Probabilités</span>
+                                <span class="badge-official text-xs px-2 py-1">20%</span>
+                            </div>
+                            <div class="w-full bg-slate-300 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-green-500 to-emerald-600 h-3 rounded-full" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-white rounded-lg border-l-4 border-blue-600">
+                        <p class="text-sm text-slate-700">
+                            <strong>Total :</strong> 192 heures annuelles (36 semaines × 5,5h/semaine)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Sections -->
+    <section id="contenus" class="py-20 bg-gradient-to-b from-slate-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Les 4 Domaines d'Étude</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Conformément à l'arrêté du 10 janvier 2019, le programme s'organise autour de 4 domaines complémentaires et interconnectés.
+                </p>
+            </div>
+            
+            <!-- Domain 1: Calcul & Algèbre -->
+            <div class="mb-12 topic-card bg-white p-8 rounded-2xl">
+                <div class="title-bar">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="bg-gradient-to-br from-yellow-500 to-orange-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-square-root-alt text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-800">1. Calcul & Algèbre</h3>
+                    </div>
+                    <p class="text-slate-600 mt-2">Apprentissage des structures algébriques et techniques de manipulation symbolique</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">Contenus fondamentaux:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3">
+                                <span class="concept-badge bg-yellow-100 text-yellow-800">Équations</span>
+                                <span class="text-slate-700">Résolution d'équations du 1er et 2nd degré</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-yellow-100 text-yellow-800 mt-1">Inéquations</span>
+                                <span class="text-slate-700">Résolution, tableau de signes, représentation graphique</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-yellow-100 text-yellow-800 mt-1">Polynômes</span>
+                                <span class="text-slate-700">Factorisation, divisibilité, théorème du reste</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-orange-100 text-orange-800 mt-1">Systèmes</span>
+                                <span class="text-slate-700">Résolution algébrique et graphique de systèmes linéaires</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">Formules essentielles:</h4>
+                        <div class="space-y-3">
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Identités remarquables:</p>
+                                <p class="text-lg font-bold text-slate-800">(a ± b)² = a² ± 2ab + b²</p>
+                                <p class="text-lg font-bold text-slate-800">a² - b² = (a + b)(a - b)</p>
+                            </div>
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Discriminant (2nd degré):</p>
+                                <p class="text-lg font-bold text-slate-800">Δ = b² - 4ac</p>
+                                <p class="text-sm text-slate-600 mt-2">x = (-b ± √Δ) / 2a</p>
+                            </div>
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Forme canonique:</p>
+                                <p class="text-lg font-bold text-slate-800">ax² + bx + c = a(x + b/2a)² - Δ/4a</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Domain 2: Fonctions -->
+            <div class="mb-12 topic-card bg-white p-8 rounded-2xl">
+                <div class="title-bar">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="bg-gradient-to-br from-blue-500 to-cyan-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-chart-line text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-800">2. Fonctions</h3>
+                    </div>
+                    <p class="text-slate-600 mt-2">Étude approfondie des fonctions et de leurs représentations</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">Contenus fondamentaux:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-blue-100 text-blue-800 mt-1">Généralités</span>
+                                <span class="text-slate-700">Définition, domaine, image, antécédents</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-blue-100 text-blue-800 mt-1">Affines</span>
+                                <span class="text-slate-700">f(x) = ax + b, représentation graphique, pente</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-blue-100 text-blue-800 mt-1">Quadratiques</span>
+                                <span class="text-slate-700">f(x) = ax², parabole, sommet, axe de symétrie</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-cyan-100 text-cyan-800 mt-1">Variations</span>
+                                <span class="text-slate-700">Croissance, décroissance, tableau de variations</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">Fonctions de référence:</h4>
+                        <div class="space-y-3">
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Fonction linéaire:</p>
+                                <p class="text-lg font-bold text-slate-800">f(x) = ax</p>
+                                <p class="text-xs text-slate-600">Proportionnalité, droite par l'origine</p>
+                            </div>
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Fonction carré:</p>
+                                <p class="text-lg font-bold text-slate-800">f(x) = x²</p>
+                                <p class="text-xs text-slate-600">Parabole, parité, croissante sur ℝ⁺</p>
+                            </div>
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Fonction inverse:</p>
+                                <p class="text-lg font-bold text-slate-800">f(x) = 1/x</p>
+                                <p class="text-xs text-slate-600">Hyperbole, impaire, asymptotes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Domain 3: Géométrie -->
+            <div class="mb-12 topic-card bg-white p-8 rounded-2xl">
+                <div class="title-bar">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="bg-gradient-to-br from-purple-500 to-pink-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-shapes text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-800">3. Géométrie</h3>
+                    </div>
+                    <p class="text-slate-600 mt-2">Vecteurs et géométrie dans le plan cartésien</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">Contenus fondamentaux:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-purple-100 text-purple-800 mt-1">Vecteurs</span>
+                                <span class="text-slate-700">Définition, opérations, coordonnées, base orthonormée</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-purple-100 text-purple-800 mt-1">Colinéarité</span>
+                                <span class="text-slate-700">Vecteurs colinéaires, droites parallèles</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-purple-100 text-purple-800 mt-1">Repérage</span>
+                                <span class="text-slate-700">Coordonnées cartésiennes, distance, milieu</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-pink-100 text-pink-800 mt-1">Produit scalaire</span>
+                                <span class="text-slate-700">Définition, propriétés, orthogonalité</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">Formules essentielles:</h4>
+                        <div class="space-y-3">
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Distance entre deux points:</p>
+                                <p class="text-lg font-bold text-slate-800">d(A,B) = √[(x_B - x_A)² + (y_B - y_A)²]</p>
+                            </div>
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Milieu d'un segment:</p>
+                                <p class="text-lg font-bold text-slate-800">M = ((x_A + x_B)/2, (y_A + y_B)/2)</p>
+                            </div>
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Produit scalaire:</p>
+                                <p class="text-lg font-bold text-slate-800">u · v = |u| |v| cos(θ)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Domain 4: Statistiques & Probabilités -->
+            <div class="mb-12 topic-card bg-white p-8 rounded-2xl">
+                <div class="title-bar">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="bg-gradient-to-br from-green-500 to-emerald-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-800">4. Statistiques & Probabilités</h3>
+                    </div>
+                    <p class="text-slate-600 mt-2">Analyse de données et introduction aux probabilités</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">Contenus fondamentaux:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-green-100 text-green-800 mt-1">Statistiques</span>
+                                <span class="text-slate-700">Moyenne, médiane, quartiles, variance, écart-type</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-green-100 text-green-800 mt-1">Visualisation</span>
+                                <span class="text-slate-700">Diagrammes, histogrammes, boîtes à moustaches</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-emerald-100 text-emerald-800 mt-1">Probabilités</span>
+                                <span class="text-slate-700">Expériences aléatoires, événements, probabilités</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="concept-badge bg-emerald-100 text-emerald-800 mt-1">Équiprobabilité</span>
+                                <span class="text-slate-700">Cas équiprobables, combinatoire basique</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">Formules essentielles:</h4>
+                        <div class="space-y-3">
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Moyenne:</p>
+                                <p class="text-lg font-bold text-slate-800">x̄ = (x₁ + x₂ + ... + xₙ) / n</p>
+                            </div>
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Variance:</p>
+                                <p class="text-lg font-bold text-slate-800">V = [(x₁ - x̄)² + ... + (xₙ - x̄)²] / n</p>
+                            </div>
+                            <div class="formula-box">
+                                <p class="text-sm text-slate-600 mb-1">Probabilité:</p>
+                                <p class="text-lg font-bold text-slate-800">P(A) = nombre de cas favorables / nombre total de cas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="competences" class="py-20 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Compétences Développées</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Le programme vise à développer sept compétences mathématiques essentielles pour la réussite future.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Compétence 1 -->
+                <div class="competency-list p-6 rounded-xl">
+                    <i class="fas fa-brain text-3xl text-emerald-600 mb-3"></i>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Chercher</h4>
+                    <p class="text-sm text-slate-700">Analyser un problème, identifier les informations pertinentes, émettre des conjectures</p>
+                </div>
+                
+                <!-- Compétence 2 -->
+                <div class="competency-list p-6 rounded-xl">
+                    <i class="fas fa-pen-fancy text-3xl text-emerald-600 mb-3"></i>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Modéliser</h4>
+                    <p class="text-sm text-slate-700">Traduire une situation concrète en langage mathématique, créer un modèle</p>
+                </div>
+                
+                <!-- Compétence 3 -->
+                <div class="competency-list p-6 rounded-xl">
+                    <i class="fas fa-calculator text-3xl text-emerald-600 mb-3"></i>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Calculer</h4>
+                    <p class="text-sm text-slate-700">Effectuer des calculs, manipuler des expressions, utiliser les outils numériques</p>
+                </div>
+                
+                <!-- Compétence 4 -->
+                <div class="competency-list p-6 rounded-xl">
+                    <i class="fas fa-comments text-3xl text-emerald-600 mb-3"></i>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Communiquer</h4>
+                    <p class="text-sm text-slate-700">Exprimer clairement ses résultats, justifier ses solutions, argumenter</p>
+                </div>
+                
+                <!-- Compétence 5 -->
+                <div class="competency-list p-6 rounded-xl">
+                    <i class="fas fa-check-double text-3xl text-emerald-600 mb-3"></i>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Raisonner</h4>
+                    <p class="text-sm text-slate-700">Démontrer, justifier par déduction, prouver par absurde ou par contraposée</p>
+                </div>
+                
+                <!-- Compétence 6 -->
+                <div class="competency-list p-6 rounded-xl">
+                    <i class="fas fa-lightbulb text-3xl text-emerald-600 mb-3"></i>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Représenter</h4>
+                    <p class="text-sm text-slate-700">Utiliser des diagrammes, graphiques, tableaux, schémas pour visualiser</p>
+                </div>
+                
+                <!-- Compétence 7 -->
+                <div class="competency-list p-6 rounded-xl">
+                    <i class="fas fa-tools text-3xl text-emerald-600 mb-3"></i>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Utiliser les Outils</h4>
+                    <p class="text-sm text-slate-700">Maîtriser calculatrice, tableur, logiciels de géométrie pour explorer</p>
+                </div>
+                
+                <!-- Compétence 8 -->
+                <div class="competency-list p-6 rounded-xl">
+                    <i class="fas fa-sync-alt text-3xl text-emerald-600 mb-3"></i>
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">Valider</h4>
+                    <p class="text-sm text-slate-700">Vérifier la cohérence des résultats, tester, justifier par un contreexemple</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apprentissage Détaillé Section -->
+    <section id="apprentissage" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Guide d'Apprentissage Détaillé</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Toutes les connaissances et méthodes essentielles pour maîtriser les mathématiques en Seconde.
+                </p>
+            </div>
+
+            <!-- Module 1: Calcul Algébrique Approfondi -->
+            <div class="mb-12 topic-card bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border-2 border-yellow-200">
+                <h3 class="text-2xl font-bold text-yellow-900 mb-6"><i class="fas fa-plus-circle text-yellow-600 mr-3"></i>Module 1 : Calcul Algébrique Approfondi</h3>
+                
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">1.1 - Identités Remarquables</h4>
+                        <div class="space-y-3">
+                            <div class="formula-box bg-white border-l-4 border-yellow-500">
+                                <p class="font-bold text-slate-800 mb-2">(a + b)² = a² + 2ab + b²</p>
+                                <p class="text-sm text-slate-600">Exemple: (3x + 2)² = 9x² + 12x + 4</p>
+                            </div>
+                            <div class="formula-box bg-white border-l-4 border-yellow-500">
+                                <p class="font-bold text-slate-800 mb-2">(a - b)² = a² - 2ab + b²</p>
+                                <p class="text-sm text-slate-600">Exemple: (5 - 2x)² = 25 - 20x + 4x²</p>
+                            </div>
+                            <div class="formula-box bg-white border-l-4 border-yellow-500">
+                                <p class="font-bold text-slate-800 mb-2">a² - b² = (a + b)(a - b)</p>
+                                <p class="text-sm text-slate-600">Exemple: 9 - x² = (3 + x)(3 - x)</p>
+                            </div>
+                            <div class="formula-box bg-white border-l-4 border-yellow-500">
+                                <p class="font-bold text-slate-800 mb-2">(a + b)³ = a³ + 3a²b + 3ab² + b³</p>
+                                <p class="text-sm text-slate-600">À connaître pour développements complexes</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">1.2 - Résolution d'Équations</h4>
+                        <div class="space-y-3">
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-orange-500">
+                                <p class="font-bold text-slate-800 mb-2">Équation du 1er degré: ax + b = 0</p>
+                                <p class="text-sm text-slate-700 mb-2">Méthode: x = -b/a (si a ≠ 0)</p>
+                                <p class="text-sm text-slate-600">Exemple: 2x + 3 = 0 ⟹ x = -3/2</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-orange-500">
+                                <p class="font-bold text-slate-800 mb-2">Équation du 2d degré: ax² + bx + c = 0</p>
+                                <p class="text-sm text-slate-700 mb-2">Discriminant: Δ = b² - 4ac</p>
+                                <p class="text-sm text-slate-600">Si Δ > 0: 2 solutions; Si Δ = 0: 1 solution; Si Δ < 0: pas de solution</p>
+                                <p class="text-sm text-slate-700 mt-2">x = (-b ± √Δ) / 2a</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-orange-500">
+                                <p class="font-bold text-slate-800 mb-2">Factorisation</p>
+                                <p class="text-sm text-slate-600">Trouver les racines pour factoriser: a(x - x₁)(x - x₂)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-white p-4 rounded-lg">
+                    <h4 class="font-bold text-slate-800 mb-3">1.3 - Inéquations et Tableaux de Signes</h4>
+                    <ul class="space-y-2 text-slate-700">
+                        <li><i class="fas fa-check text-emerald-600 mr-2"></i><strong>Inéquation du 1er degré:</strong> ax + b > 0 ou ax + b < 0</li>
+                        <li><i class="fas fa-check text-emerald-600 mr-2"></i><strong>Inéquation du 2d degré:</strong> Dresser un tableau de signes avec racines</li>
+                        <li><i class="fas fa-check text-emerald-600 mr-2"></i><strong>Représentation:</strong> Sur une droite graduée ou intervalle [a;b]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Module 2: Fonctions Avancées -->
+            <div class="mb-12 topic-card bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border-2 border-blue-200">
+                <h3 class="text-2xl font-bold text-blue-900 mb-6"><i class="fas fa-graph text-blue-600 mr-3"></i>Module 2 : Fonctions Avancées</h3>
+                
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">2.1 - Fonction Affine</h4>
+                        <div class="space-y-3">
+                            <div class="formula-box bg-white border-l-4 border-blue-500">
+                                <p class="font-bold text-slate-800 mb-2">f(x) = ax + b</p>
+                                <p class="text-sm text-slate-600"><strong>a:</strong> coefficient directeur (pente)</p>
+                                <p class="text-sm text-slate-600"><strong>b:</strong> ordonnée à l'origine (intersection avec l'axe y)</p>
+                                <p class="text-sm text-slate-700 mt-2">Représentation: droite non verticale</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+                                <p class="text-sm text-slate-700"><strong>Croissance:</strong> Si a > 0, fonction croissante; Si a < 0, décroissante</p>
+                                <p class="text-sm text-slate-700 mt-2"><strong>Zéro:</strong> x = -b/a (intersection avec l'axe x)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">2.2 - Fonction Carré</h4>
+                        <div class="space-y-3">
+                            <div class="formula-box bg-white border-l-4 border-cyan-500">
+                                <p class="font-bold text-slate-800 mb-2">f(x) = x²</p>
+                                <p class="text-sm text-slate-600">Parabole avec sommet en (0, 0)</p>
+                                <p class="text-sm text-slate-700 mt-2">Propriétés: Paire, minimum en 0</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-cyan-500">
+                                <p class="text-sm text-slate-700"><strong>Variation:</strong> Décroissante sur ]-∞;0], croissante sur [0;+∞[</p>
+                                <p class="text-sm text-slate-700 mt-2"><strong>Domaine:</strong> ℝ | <strong>Image:</strong> [0;+∞[</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+                        <p class="font-bold text-slate-800 mb-2">2.3 - Fonction Inverse</p>
+                        <p class="text-sm text-slate-600 mb-2">f(x) = 1/x</p>
+                        <p class="text-sm text-slate-700">Hyperbole, impaire, asymptotes x = 0 et y = 0</p>
+                        <p class="text-sm text-slate-700 mt-2">Domaine: ℝ* | Image: ℝ*</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border-l-4 border-cyan-500">
+                        <p class="font-bold text-slate-800 mb-2">2.4 - Fonction Racine</p>
+                        <p class="text-sm text-slate-600 mb-2">f(x) = √x</p>
+                        <p class="text-sm text-slate-700">Croissante sur [0;+∞[</p>
+                        <p class="text-sm text-slate-700 mt-2">Domaine: [0;+∞[ | Image: [0;+∞[</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+                        <p class="font-bold text-slate-800 mb-2">2.5 - Fonction Polynôme</p>
+                        <p class="text-sm text-slate-600 mb-2">f(x) = ax² + bx + c</p>
+                        <p class="text-sm text-slate-700">Sommet: x = -b/2a</p>
+                        <p class="text-sm text-slate-700 mt-2">Forme canonique: a(x+b/2a)² - Δ/4a</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3: Géométrie & Vecteurs -->
+            <div class="mb-12 topic-card bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-200">
+                <h3 class="text-2xl font-bold text-purple-900 mb-6"><i class="fas fa-vector-square text-purple-600 mr-3"></i>Module 3 : Géométrie & Vecteurs</h3>
+                
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">3.1 - Vecteurs Fondamentaux</h4>
+                        <div class="space-y-3">
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-purple-500">
+                                <p class="font-bold text-slate-800 mb-2">Définition d'un vecteur</p>
+                                <p class="text-sm text-slate-600">Direction, sens et norme (longueur)</p>
+                                <p class="text-sm text-slate-700 mt-2">Notation: vecteur AB = B - A</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-purple-500">
+                                <p class="font-bold text-slate-800 mb-2">Coordonnées cartésiennes</p>
+                                <p class="text-sm text-slate-600">Point A(x_A, y_A) et B(x_B, y_B)</p>
+                                <p class="text-sm text-slate-700 mt-2">Vecteur AB = (x_B - x_A, y_B - y_A)</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-pink-500">
+                                <p class="font-bold text-slate-800 mb-2">Norme d'un vecteur</p>
+                                <p class="text-sm text-slate-600">||u|| = √(u₁² + u₂²)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">3.2 - Opérations Vectorielles</h4>
+                        <div class="space-y-3">
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-purple-500">
+                                <p class="font-bold text-slate-800 mb-2">Addition de vecteurs</p>
+                                <p class="text-sm text-slate-600">u + v = (u₁ + v₁, u₂ + v₂)</p>
+                                <p class="text-sm text-slate-700 mt-1">Règle du parallélogramme</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-purple-500">
+                                <p class="font-bold text-slate-800 mb-2">Multiplication par un scalaire</p>
+                                <p class="text-sm text-slate-600">k·u = (k·u₁, k·u₂)</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-pink-500">
+                                <p class="font-bold text-slate-800 mb-2">Colinéarité</p>
+                                <p class="text-sm text-slate-600">u et v colinéaires ⟺ u₁v₂ - u₂v₁ = 0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-white p-4 rounded-lg border-l-4 border-purple-500">
+                    <h4 class="font-bold text-slate-800 mb-3">3.3 - Produit Scalaire & Orthogonalité</h4>
+                    <div class="grid lg:grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-slate-700 mb-2"><strong>Définition algébrique:</strong></p>
+                            <p class="font-bold text-slate-800 mb-2">u · v = u₁v₁ + u₂v₂</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-700 mb-2"><strong>Définition géométrique:</strong></p>
+                            <p class="font-bold text-slate-800 mb-2">u · v = |u| |v| cos(θ)</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-700 mt-3"><strong>Orthogonalité:</strong> u ⊥ v ⟺ u · v = 0</p>
+                </div>
+            </div>
+
+            <!-- Module 4: Statistiques & Probabilités -->
+            <div class="mb-12 topic-card bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-200">
+                <h3 class="text-2xl font-bold text-green-900 mb-6"><i class="fas fa-chart-bar text-green-600 mr-3"></i>Module 4 : Statistiques & Probabilités</h3>
+                
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">4.1 - Statistiques Descriptives</h4>
+                        <div class="space-y-3">
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                                <p class="font-bold text-slate-800 mb-2">Moyenne (x̄)</p>
+                                <p class="text-sm text-slate-600">x̄ = (x₁ + x₂ + ... + xₙ) / n</p>
+                                <p class="text-sm text-slate-700 mt-1">Somme divisée par le nombre de valeurs</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                                <p class="font-bold text-slate-800 mb-2">Médiane (Me)</p>
+                                <p class="text-sm text-slate-600">Valeur qui divise l'ensemble en 2 parties égales</p>
+                                <p class="text-sm text-slate-700 mt-1">50% des valeurs en dessous, 50% au-dessus</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-emerald-500">
+                                <p class="font-bold text-slate-800 mb-2">Quartiles</p>
+                                <p class="text-sm text-slate-600">Q1 (25%), Q2 (50%), Q3 (75%)</p>
+                                <p class="text-sm text-slate-700 mt-1">Écart interquartile: IQR = Q3 - Q1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-4">4.2 - Mesures de Dispersion</h4>
+                        <div class="space-y-3">
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                                <p class="font-bold text-slate-800 mb-2">Variance (V)</p>
+                                <p class="text-sm text-slate-600">V = Σ(xᵢ - x̄)² / n</p>
+                                <p class="text-sm text-slate-700 mt-1">Moyenne des écarts au carré</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                                <p class="font-bold text-slate-800 mb-2">Écart-type (σ ou s)</p>
+                                <p class="text-sm text-slate-600">σ = √V</p>
+                                <p class="text-sm text-slate-700 mt-1">Mesure de dispersion autour de la moyenne</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-emerald-500">
+                                <p class="font-bold text-slate-800 mb-2">Étendue (E)</p>
+                                <p class="text-sm text-slate-600">E = xₘₐₓ - xₘᵢₙ</p>
+                                <p class="text-sm text-slate-700 mt-1">Différence entre la plus grande et plus petite valeur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-white p-4 rounded-lg border-l-4 border-green-500">
+                    <h4 class="font-bold text-slate-800 mb-3">4.3 - Probabilités</h4>
+                    <div class="grid lg:grid-cols-2 gap-4">
+                        <div>
+                            <p class="font-bold text-slate-800 mb-2">Expérience aléatoire</p>
+                            <p class="text-sm text-slate-600">Événement dont le résultat est imprévisible</p>
+                            <p class="text-sm text-slate-700 mt-2"><strong>Univers Ω:</strong> ensemble de tous les résultats possibles</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-800 mb-2">Probabilité d'un événement</p>
+                            <p class="text-sm text-slate-600">P(A) = nombre de cas favorables / nombre total de cas</p>
+                            <p class="text-sm text-slate-700 mt-2">0 ≤ P(A) ≤ 1 | P(Ω) = 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Méthodes de Résolution Section -->
+    <section class="py-20 bg-gradient-to-b from-slate-100 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Méthodes de Résolution</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Apprenez les techniques essentielles pour résoudre tous les types de problèmes mathématiques.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- Méthode 1 -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-yellow-200 shadow-lg">
+                    <h3 class="text-2xl font-bold text-yellow-900 mb-4"><i class="fas fa-list-ol text-yellow-600 mr-2"></i>Résoudre une Équation du 2d Degré</h3>
+                    <ol class="space-y-4">
+                        <li class="flex gap-4">
+                            <span class="bg-yellow-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Identifier a, b et c</p>
+                                <p class="text-sm text-slate-600">Dans ax² + bx + c = 0</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-yellow-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Calculer le discriminant Δ</p>
+                                <p class="text-sm text-slate-600">Δ = b² - 4ac</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-yellow-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Analyser le signe de Δ</p>
+                                <p class="text-sm text-slate-600">Δ > 0 (2 solutions) | Δ = 0 (1 solution) | Δ < 0 (pas de solution)</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-yellow-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">4</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Appliquer la formule</p>
+                                <p class="text-sm text-slate-600">x = (-b ± √Δ) / 2a si Δ ≥ 0</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Méthode 2 -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4"><i class="fas fa-sign-out-alt text-blue-600 mr-2"></i>Factoriser une Expression Algébrique</h3>
+                    <ol class="space-y-4">
+                        <li class="flex gap-4">
+                            <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Chercher le facteur commun</p>
+                                <p class="text-sm text-slate-600">Mettre en évidence les termes répétés</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Reconnaître une identité remarquable</p>
+                                <p class="text-sm text-slate-600">a² - b², (a+b)², (a-b)²</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Utiliser le discriminant</p>
+                                <p class="text-sm text-slate-600">Pour ax² + bx + c, trouver les racines</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">4</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Écrire sous forme produit</p>
+                                <p class="text-sm text-slate-600">a(x - x₁)(x - x₂)</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Méthode 3 -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-purple-200 shadow-lg">
+                    <h3 class="text-2xl font-bold text-purple-900 mb-4"><i class="fas fa-arrows text-purple-600 mr-2"></i>Étudier les Variations d'une Fonction</h3>
+                    <ol class="space-y-4">
+                        <li class="flex gap-4">
+                            <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Déterminer le domaine de définition</p>
+                                <p class="text-sm text-slate-600">Les valeurs pour lesquelles f(x) existe</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Calculer la dérivée (si nécessaire)</p>
+                                <p class="text-sm text-slate-600">f'(x) pour étudier le sens de variation</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Établir le tableau de signes de f'</p>
+                                <p class="text-sm text-slate-600">Détermine croissance et décroissance</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">4</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Dresser le tableau de variations</p>
+                                <p class="text-sm text-slate-600">Visualiser le comportement de la fonction</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Méthode 4 -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-green-200 shadow-lg">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-calculator text-green-600 mr-2"></i>Calculer la Probabilité d'un Événement</h3>
+                    <ol class="space-y-4">
+                        <li class="flex gap-4">
+                            <span class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Définir l'expérience aléatoire</p>
+                                <p class="text-sm text-slate-600">Comprendre ce qui se passe exactement</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Dénombrer l'univers Ω</p>
+                                <p class="text-sm text-slate-600">Compter tous les résultats possibles</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Identifier l'événement favorable</p>
+                                <p class="text-sm text-slate-600">Les cas qui correspondent à notre événement</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">4</span>
+                            <div>
+                                <p class="font-bold text-slate-800">Appliquer la formule</p>
+                                <p class="text-sm text-slate-600">P(A) = cas favorables / cas totals</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Méthodologie Section -->
+    <section id="methodologie" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Approche Pédagogique</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Le programme privilégie une pédagogie active, basée sur la résolution de problèmes et l'expérimentation.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Démarches pédagogiques -->
+                <div class="content-box">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 title-bar">
+                        <i class="fas fa-chalkboard-user text-emerald-600"></i> Démarches Pédagogiques
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <div class="bg-emerald-100 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <span class="font-bold text-emerald-700">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Approche Inductive</h4>
+                                <p class="text-sm text-slate-600">Partir d'exemples concrets pour généraliser les concepts mathématiques</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="bg-emerald-100 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <span class="font-bold text-emerald-700">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Résolution de Problèmes</h4>
+                                <p class="text-sm text-slate-600">Proposer des situations problèmes qui motivent et contextualisent</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="bg-emerald-100 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <span class="font-bold text-emerald-700">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Apprentissage Collaboratif</h4>
+                                <p class="text-sm text-slate-600">Favoriser le travail en groupe et les débats mathématiques</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="bg-emerald-100 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <span class="font-bold text-emerald-700">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Expérimentation Numérique</h4>
+                                <p class="text-sm text-slate-600">Utiliser les technologies pour explorer, conjecturer et valider</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Conseils pour les élèves -->
+                <div class="content-box">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 title-bar">
+                        <i class="fas fa-star text-yellow-500"></i> Conseils pour Réussir
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <i class="fas fa-check text-emerald-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Comprendre avant de mémoriser</h4>
+                                <p class="text-sm text-slate-600">Assurez-vous de comprendre les concepts fondamentaux</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-check text-emerald-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Pratiquer régulièrement</h4>
+                                <p class="text-sm text-slate-600">Faire des exercices variés pour consolider vos connaissances</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-check text-emerald-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Justifier vos réponses</h4>
+                                <p class="text-sm text-slate-600">Expliquez pourquoi votre réponse est correcte</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-check text-emerald-600 text-xl flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Utiliser les outils adéquats</h4>
+                                <p class="text-sm text-slate-600">Calculatrice, GeoGebra, tableur pour valider vos solutions</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercices Pratiques Section -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Exercices Pratiques</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Entraînez-vous avec des exercices progressifs pour consolider vos connaissances.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- Exercice 1 -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-yellow-200 shadow-lg">
+                    <h3 class="text-xl font-bold text-yellow-900 mb-4"><i class="fas fa-star text-yellow-500 mr-2"></i>Exercice 1 - Équation du 2d Degré</h3>
+                    <div class="bg-yellow-50 p-4 rounded-lg mb-4">
+                        <p class="text-slate-800 font-semibold mb-2">Énoncé:</p>
+                        <p class="text-slate-700">Résolvez l'équation: 2x² - 5x + 3 = 0</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <p class="text-slate-800 font-semibold mb-2">Solution:</p>
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li><strong>a = 2, b = -5, c = 3</strong></li>
+                            <li><strong>Δ = (-5)² - 4(2)(3) = 25 - 24 = 1</strong></li>
+                            <li><strong>√Δ = 1</strong></li>
+                            <li><strong>x₁ = (5 + 1) / 4 = 1.5</strong></li>
+                            <li><strong>x₂ = (5 - 1) / 4 = 1</strong></li>
+                            <li class="pt-2 border-t border-green-300"><strong>Réponse: x = 1 ou x = 1.5</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exercice 2 -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-lg">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4"><i class="fas fa-star text-blue-500 mr-2"></i>Exercice 2 - Fonction Affine</h3>
+                    <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                        <p class="text-slate-800 font-semibold mb-2">Énoncé:</p>
+                        <p class="text-slate-700">Soit f(x) = 3x - 2. Trouvez f(4) et le zéro de f.</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <p class="text-slate-800 font-semibold mb-2">Solution:</p>
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li><strong>f(4) = 3(4) - 2 = 12 - 2 = 10</strong></li>
+                            <li><strong>Zéro: 3x - 2 = 0</strong></li>
+                            <li><strong>3x = 2</strong></li>
+                            <li><strong>x = 2/3</strong></li>
+                            <li class="pt-2 border-t border-green-300"><strong>Réponse: f(4) = 10 et zéro en x = 2/3</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exercice 3 -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-purple-200 shadow-lg">
+                    <h3 class="text-xl font-bold text-purple-900 mb-4"><i class="fas fa-star text-purple-500 mr-2"></i>Exercice 3 - Vecteurs</h3>
+                    <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                        <p class="text-slate-800 font-semibold mb-2">Énoncé:</p>
+                        <p class="text-slate-700">A(1,2), B(4,6). Trouvez les coordonnées du vecteur AB et sa norme.</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <p class="text-slate-800 font-semibold mb-2">Solution:</p>
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li><strong>AB = (4-1, 6-2) = (3, 4)</strong></li>
+                            <li><strong>||AB|| = √(3² + 4²) = √(9 + 16) = √25 = 5</strong></li>
+                            <li class="pt-2 border-t border-green-300"><strong>Réponse: AB(3,4) et ||AB|| = 5</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exercice 4 -->
+                <div class="bg-white p-8 rounded-2xl border-2 border-green-200 shadow-lg">
+                    <h3 class="text-xl font-bold text-green-900 mb-4"><i class="fas fa-star text-green-500 mr-2"></i>Exercice 4 - Probabilités</h3>
+                    <div class="bg-green-50 p-4 rounded-lg mb-4">
+                        <p class="text-slate-800 font-semibold mb-2">Énoncé:</p>
+                        <p class="text-slate-700">On lance un dé équilibré. Quelle est la probabilité d'obtenir un nombre pair?</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <p class="text-slate-800 font-semibold mb-2">Solution:</p>
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li><strong>Univers Ω = {1, 2, 3, 4, 5, 6}</strong></li>
+                            <li><strong>Événement A (nombre pair) = {2, 4, 6}</strong></li>
+                            <li><strong>Nombre de cas favorables = 3</strong></li>
+                            <li><strong>Nombre de cas totals = 6</strong></li>
+                            <li><strong>P(A) = 3/6 = 1/2 = 0.5</strong></li>
+                            <li class="pt-2 border-t border-green-300"><strong>Réponse: 50% de chance</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conseils d'Étude -->
+            <div class="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold mb-6"><i class="fas fa-lightbulb mr-2"></i>Conseils pour Réussir en Mathématiques</h3>
+                <div class="grid lg:grid-cols-2 gap-6">
+                    <div class="flex gap-4">
+                        <i class="fas fa-check-circle text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold mb-1">Comprendre avant de mémoriser</p>
+                            <p class="text-emerald-100 text-sm">Assurez-vous d'avoir compris chaque concept avant de le mémoriser. Posez des questions!</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-check-circle text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold mb-1">Pratiquer régulièrement</p>
+                            <p class="text-emerald-100 text-sm">Faites des exercices tous les jours, même juste 15-20 minutes. La pratique régulière est la clé.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-check-circle text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold mb-1">Justifier vos réponses</p>
+                            <p class="text-emerald-100 text-sm">Écrivez vos étapes et expliquez votre raisonnement. C'est crucial pour les examens.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-check-circle text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold mb-1">Utiliser les bons outils</p>
+                            <p class="text-emerald-100 text-sm">Calculatrice graphique, GeoGebra, tableur - utilisez-les pour vérifier vos solutions.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-check-circle text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold mb-1">Faire des fiches de synthèse</p>
+                            <p class="text-emerald-100 text-sm">Notez les formules clés, les étapes, les pièges courants. Relisez-les régulièrement.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-check-circle text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold mb-1">Ne pas craindre les erreurs</p>
+                            <p class="text-emerald-100 text-sm">Les erreurs sont vos meilleures amies. Analysez-les pour progresser encore plus vite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="py-20 bg-gradient-to-b from-slate-50 to-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Ressources Officielles</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Accédez aux documents officiels et ressources complémentaires du ministère de l'Éducation Nationale.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Official Document -->
+                <a href="https://www.education.gouv.fr/bo/19/Special1/MENE1901631A.htm" target="_blank" class="group bg-white p-8 rounded-2xl border border-slate-200 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <i class="fas fa-file-pdf text-5xl text-red-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-3">BO n°30 du 25 juillet 2019</h3>
+                    <p class="text-slate-700 mb-4">
+                        Document officiel complet du programme de mathématiques en classe de 2de générale et technologique
+                    </p>
+                    <div class="inline-flex items-center gap-2 text-emerald-600 font-bold group-hover:gap-3 transition-all">
+                        Consulter <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                
+                <!-- Éduscol Ressources -->
+                <a href="https://eduscol.education.fr/cid144621/ressources-2nd-mathematiques.html" target="_blank" class="group bg-white p-8 rounded-2xl border border-slate-200 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <i class="fas fa-book-open text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-3">Ressources Éduscol</h3>
+                    <p class="text-slate-700 mb-4">
+                        Ressources pédagogiques complémentaires proposées par le ministère pour accompagner l'enseignement
+                    </p>
+                    <div class="inline-flex items-center gap-2 text-emerald-600 font-bold group-hover:gap-3 transition-all">
+                        Découvrir <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glossaire Section -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Glossaire Mathématique</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Définitions essentielles des termes mathématiques les plus importants.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-xl border-l-4 border-emerald-600">
+                    <p class="font-bold text-slate-800 mb-2">Domaine de définition</p>
+                    <p class="text-sm text-slate-600">Ensemble de toutes les valeurs x pour lesquelles f(x) est défini</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-emerald-600">
+                    <p class="font-bold text-slate-800 mb-2">Antécédent</p>
+                    <p class="text-sm text-slate-600">Valeur de x telle que f(x) = y (on cherche x connaissant y)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-blue-600">
+                    <p class="font-bold text-slate-800 mb-2">Discriminant (Δ)</p>
+                    <p class="text-sm text-slate-600">Nombre Δ = b² - 4ac déterminant le nombre de solutions d'une équation</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-blue-600">
+                    <p class="font-bold text-slate-800 mb-2">Racine d'un polynôme</p>
+                    <p class="text-sm text-slate-600">Valeur de x telle que P(x) = 0 (où le polynôme s'annule)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-purple-600">
+                    <p class="font-bold text-slate-800 mb-2">Vecteur colinéaire</p>
+                    <p class="text-sm text-slate-600">Deux vecteurs ayant la même direction (parallèles ou confondus)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-purple-600">
+                    <p class="font-bold text-slate-800 mb-2">Produit scalaire</p>
+                    <p class="text-sm text-slate-600">Opération entre deux vecteurs qui donne un nombre (scalaire)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-green-600">
+                    <p class="font-bold text-slate-800 mb-2">Quartile</p>
+                    <p class="text-sm text-slate-600">Valeur divisant les données en 4 parties égales (Q1, Q2=médiane, Q3)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-green-600">
+                    <p class="font-bold text-slate-800 mb-2">Événement équiprobable</p>
+                    <p class="text-sm text-slate-600">Situation où tous les résultats possibles ont la même probabilité</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-yellow-600">
+                    <p class="font-bold text-slate-800 mb-2">Identité remarquable</p>
+                    <p class="text-sm text-slate-600">Formule algébrique vraie pour tous les nombres (ex: (a+b)² = a²+2ab+b²)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-yellow-600">
+                    <p class="font-bold text-slate-800 mb-2">Factorisation</p>
+                    <p class="text-sm text-slate-600">Écrire une expression sous la forme d'un produit de facteurs</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-cyan-600">
+                    <p class="font-bold text-slate-800 mb-2">Fonction affine</p>
+                    <p class="text-sm text-slate-600">Fonction de la forme f(x) = ax + b (représentation: droite)</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-cyan-600">
+                    <p class="font-bold text-slate-800 mb-2">Parabole</p>
+                    <p class="text-sm text-slate-600">Représentation graphique d'une fonction polynôme du 2d degré</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-slate-300 pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-calculator text-3xl text-emerald-400"></i>
+                        <h3 class="text-xl font-bold text-white">Mathématiques 2de</h3>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        Application pédagogique officielle conforme au programme du ministère de l'Éducation Nationale.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#programme" class="text-slate-400 hover:text-emerald-400">Programme Officiel</a></li>
+                        <li><a href="#apprentissage" class="text-slate-400 hover:text-emerald-400">Guide d'Apprentissage</a></li>
+                        <li><a href="#methodologie" class="text-slate-400 hover:text-emerald-400">Méthodes & Exercices</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-4">Références officielles</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Arrêté du 10 janvier 2019</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>BO n°30 du 25 juillet 2019</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Éduscol & Ministère</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-slate-700 my-6">
+            
+            <p class="text-center text-slate-500 text-sm">
+                © 2025 Mathématiques 2de - Application officielle | <i class="fas fa-certificate text-emerald-400"></i> Conforme au programme français | Fiabilité garantie 100%
+            </p>
+        </div>
+    </footer>
+    
+    <!-- Concepts Clés Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold section-title mb-4">Concepts Clés à Retenir</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Les théorèmes, propriétés et concepts fondamentaux indispensables pour réussir.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- Théorèmes Algèbre -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-2xl border-2 border-yellow-200">
+                    <h3 class="text-2xl font-bold text-yellow-900 mb-6"><i class="fas fa-star text-yellow-600 mr-2"></i>Théorèmes Algébriques</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-yellow-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Théorème du reste</p>
+                                <p class="text-sm text-slate-600">Si P(r) = 0, alors (x - r) divise P(x)</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-yellow-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Polynôme du 2d degré</p>
+                                <p class="text-sm text-slate-600">Peut toujours s'écrire sous forme canonique</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-yellow-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Signe d'une expression</p>
+                                <p class="text-sm text-slate-600">Tableau de signes pour résoudre les inéquations</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-yellow-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Propriétés des inégalités</p>
+                                <p class="text-sm text-slate-600">Conservation en ajoutant/soustrayant; attention à la multiplication</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Théorèmes Géométrie -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-200">
+                    <h3 class="text-2xl font-bold text-purple-900 mb-6"><i class="fas fa-star text-purple-600 mr-2"></i>Théorèmes Géométriques</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-purple-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Vecteurs colinéaires</p>
+                                <p class="text-sm text-slate-600">Deux vecteurs sont colinéaires ssi u₁v₂ - u₂v₁ = 0</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-purple-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Orthogonalité</p>
+                                <p class="text-sm text-slate-600">Deux vecteurs orthogonaux ssi leur produit scalaire = 0</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-purple-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Théorème de Pythagore</p>
+                                <p class="text-sm text-slate-600">Dans un triangle rectangle: a² + b² = c²</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-purple-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Distance et milieu</p>
+                                <p class="text-sm text-slate-600">Formules de base du repérage cartésien</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Propriétés Fonctions -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border-2 border-blue-200">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6"><i class="fas fa-star text-blue-600 mr-2"></i>Propriétés des Fonctions</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-blue-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Fonction paire</p>
+                                <p class="text-sm text-slate-600">f(-x) = f(x) pour tout x du domaine</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-blue-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Fonction impaire</p>
+                                <p class="text-sm text-slate-600">f(-x) = -f(x) pour tout x du domaine</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-blue-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Fonction croissante</p>
+                                <p class="text-sm text-slate-600">Si x₁ < x₂ alors f(x₁) < f(x₂)</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-blue-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Image et antécédent</p>
+                                <p class="text-sm text-slate-600">Image = f(x), Antécédent = résoudre f(x) = y</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Propriétés Probabilités -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-200">
+                    <h3 class="text-2xl font-bold text-green-900 mb-6"><i class="fas fa-star text-green-600 mr-2"></i>Propriétés Probabilistes</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-green-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Probabilité d'un événement</p>
+                                <p class="text-sm text-slate-600">0 ≤ P(A) ≤ 1</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-green-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Événement complémentaire</p>
+                                <p class="text-sm text-slate-600">P(A') = 1 - P(A)</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-green-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Union d'événements</p>
+                                <p class="text-sm text-slate-600">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-arrow-right text-green-600 text-xl mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-bold text-slate-800">Événements équiprobables</p>
+                                <p class="text-sm text-slate-600">Tous les résultats ont la même chance de se produire</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pièges courants -->
+            <div class="mt-12 bg-red-50 border-2 border-red-200 p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-red-900 mb-6"><i class="fas fa-exclamation-triangle text-red-600 mr-2"></i>Pièges Courants à Éviter</h3>
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <div class="flex gap-3">
+                        <i class="fas fa-times text-red-600 text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">Équation vs Inéquation</p>
+                            <p class="text-sm text-slate-600">Ne pas confondre = et <, >. L'inéquation change de sens en multipliant par -1</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fas fa-times text-red-600 text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">Domaine de définition</p>
+                            <p class="text-sm text-slate-600">Toujours vérifier: pas de dénominateur 0, pas de √ de négatif</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fas fa-times text-red-600 text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">Discriminant négatif</p>
+                            <p class="text-sm text-slate-600">Si Δ < 0, pas de solution réelle (pas d'interprétation graphique)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fas fa-times text-red-600 text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">Division par zéro</p>
+                            <p class="text-sm text-slate-600">Jamais diviser par 0. Factoriser et simplifier plutôt</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fas fa-times text-red-600 text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">Vecteurs opposés</p>
+                            <p class="text-sm text-slate-600">Ne pas confondre AB et BA. BA = -AB</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fas fa-times text-red-600 text-2xl flex-shrink-0"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">Probabilité événement impossible</p>
+                            <p class="text-sm text-slate-600">P(∅) = 0, pas de probabilité négative</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white w-12 h-12 rounded-full shadow-2xl hover:scale-110 transition-all z-40 opacity-0" style="pointer-events: none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Back to top
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.opacity = '1';
+                backToTopBtn.style.pointerEvents = 'auto';
+            } else {
+                backToTopBtn.style.opacity = '0';
+                backToTopBtn.style.pointerEvents = 'none';
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        console.log('%c 📐 Application officielle Mathématiques 2de ', 'background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 16px; font-weight: bold; padding: 10px;');
+        console.log('Programme conforme à l\'arrêté du 10 janvier 2019 - BO n°30 du 25 juillet 2019');
+    </script>
+</body>
+</html>
